@@ -19,6 +19,7 @@ app.get('/api/get-block/:blockNumber', async(req, res) => {
 
 app.get('/api/get-balance/:balance', async(req, res) => {
     let balance = await web3.eth.getBalance(req.params['balance'])
+    //balance = balance/1000000000000000000 + 'Ξ'
     res.json({balance})
 })
 
